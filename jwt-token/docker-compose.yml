@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    container_name: simurgh-db
+    environment:
+      MYSQL_ROOT_PASSWORD: mhmtroot
+      MYSQL_DATABASE: mhmt-db
+      MYSQL_USER: mhmt
+      MYSQL_PASSWORD: 123456
+    ports:
+      - '3306:3306'
